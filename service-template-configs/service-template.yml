@@ -1,0 +1,32 @@
+#############################################
+# BASE CONFIG FOR SERVICE-TEMPLATE
+# This applies to all environments (dev, qa, prod),
+# unless overridden by environment-specific files.
+#############################################
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: service-template
+
+# Basic application-level settings
+app:
+  greeting: "Hello from Service Template (base config)"
+  feature-flags:
+    enable-sample-feature: false
+
+# Placeholder for database (not yet in use)
+# spring:
+#   datasource:
+#     driver-class-name: org.postgresql.Driver
+#     url: jdbc:postgresql://localhost:5432/service_template
+#     username: service_template_user
+#     password: ${SERVICE_TEMPLATE_DB_PASS}
+
+# Placeholder for service discovery
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka/

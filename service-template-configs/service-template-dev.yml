@@ -1,0 +1,25 @@
+#############################################
+# DEVELOPMENT CONFIG FOR SERVICE-TEMPLATE
+#############################################
+
+server:
+  port: 8082   # different from base to avoid clashes when running multiple services locally
+
+app:
+  greeting: "Hello from Service Template (DEV environment)"
+  feature-flags:
+    enable-sample-feature: true   # maybe test new features in dev
+
+# More verbose logging in dev
+logging:
+  level:
+    root: DEBUG
+    co.za.sanaptics.service_template: DEBUG
+
+# Example of how you *might* point to a local DB in dev (placeholder)
+# spring:
+#   datasource:
+#     url: jdbc:h2:mem:service_template_dev;DB_CLOSE_DELAY=-1
+#     driver-class-name: org.h2.Driver
+#     username: sa
+#     password:

@@ -1,0 +1,63 @@
+#############################################
+# GLOBAL CONFIG (applies to all microservices)
+# Keep this light and generic — add more as project grows.
+#############################################
+
+server:
+  # If a service doesn’t specify a port, fallback to 8080
+  port: 8080
+
+spring:
+  application:
+    # Default app name placeholder (overridden by each microservice)
+    name: unknown-service
+
+  profiles:
+    # Default profile if none is set (can be overridden: dev, qa, prod)
+    active: dev
+
+#############################################
+# ACTUATOR / HEALTH ENDPOINTS
+# Helps check if services are alive
+#############################################
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info   # keep it minimal now
+
+  endpoint:
+    health:
+      show-details: when_authorized  # security-ready
+
+#############################################
+# LOGGING DEFAULTS
+# Use INFO for general logging; override later per service/env
+#############################################
+logging:
+  level:
+    root: INFO
+
+#############################################
+# PLACEHOLDERS FOR FUTURE EXPANSION
+#############################################
+
+# Database (to be added later per-service)
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://localhost:5432/dbname
+#     username: user
+#     password: pass
+
+# Resilience4j / Circuit Breakers (future)
+# resilience4j:
+#   circuitbreaker:
+#     configs:
+#       default:
+#         failureRateThreshold: 50
+#         waitDurationInOpenState: 10s
+
+# Feature Flags (can enable/disable features per service/env)
+# app:
+#   feature-flags:
+#     enable-new-ui: false

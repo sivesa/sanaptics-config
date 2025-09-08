@@ -1,0 +1,24 @@
+#############################################
+# QA CONFIG FOR SERVICE-TEMPLATE
+#############################################
+
+server:
+  port: 8083
+
+app:
+  greeting: "Hello from Service Template (QA environment)"
+  feature-flags:
+    enable-sample-feature: true   # QA may need to test features before prod
+
+logging:
+  level:
+    root: INFO
+    co.za.sanaptics.service_template: DEBUG   # still want details during QA testing
+
+# Example of how QA DB might look (to be filled in later)
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://qa-db-server:5432/service_template
+#     driver-class-name: org.postgresql.Driver
+#     username: qa_user
+#     password: ${QA_DB_PASS}
