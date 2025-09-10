@@ -1,0 +1,7 @@
+spring:
+  profiles: qa
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://qa-eureka:8761/eureka/

@@ -1,0 +1,4 @@
+spring:
+  profiles: qa
+server:
+  port: 8080

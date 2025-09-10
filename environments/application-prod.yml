@@ -1,0 +1,7 @@
+spring:
+  profiles: prod
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://prod-eureka:8761/eureka/
