@@ -12,9 +12,9 @@ spring:
     # Default app name placeholder (overridden by each microservice)
     name: unknown-service
 
-  profiles:
-    # Default profile if none is set (can be overridden: dev, qa, prod)
-    active: dev
+#  profiles:
+#    # Default profile if none is set (can be overridden: dev, qa, prod)
+#    active: dev
 
 #############################################
 # ACTUATOR / HEALTH ENDPOINTS
